@@ -9,7 +9,7 @@ A complete step-by-step guide to develop a data analysis project assessing the p
 Objective: Evaluate the market feasibility, commercial potential, and regulatory environment for launching the Aquaria project in Morocco—whether as an aquarium attraction or as a retail/e-commerce business in aquariophilia.
 📂 Project Structure (Implementation-Ready Directory)
 
-aquaria_morocco_project/
+Aquaria-Morocco_Data-Analysis_Project/
 │
 ├── data/
 │   ├── raw/                  # Unprocessed source data
