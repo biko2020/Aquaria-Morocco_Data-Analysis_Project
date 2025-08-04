@@ -266,20 +266,16 @@ Collaboration	GitHub, Google Drive, Notion
 Modeling	Excel or Python
 Legal Research	ONSSA, CITES, HCP, PLU documents
 
-# Environment Setup
-
-To create a virtual environment, run the following commands:
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-🧠 Optional Add-ons
 
     Partner with a local university for surveys
 
     Use Google Trends API for aquaria-related search terms
 
     Conduct a focus group with Moroccan pet owners
+
+# Environment Setup
+To create a virtual environment, run the following commands:
+
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
