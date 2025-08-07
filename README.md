@@ -1,281 +1,168 @@
-Aquaria Morocco Data Analysis Project
+# Aquaria-Morocco Data Analysis Project
 
-A complete step-by-step guide to develop a data analysis project assessing the potential of the Aquaria project in Morocco, focusing on feasibility, market demand, competition, and financial modeling.
+## Overview
 
-# Complete Guide: Aquaria Data Analysis Project - Moroccan Market
+This project analyzes the Moroccan market for Aquaria's Atmospheric Water Generator (AWG) products. Aquaria specializes in AWGs that produce clean, potable water from air, targeting residential, commercial, and community applications. The company aims to address water security challenges, particularly in regions affected by drought or limited water infrastructure, such as Morocco. This project provides a data-driven roadmap to support Aquaria's potential market entry.
 
-📌 Project Summary
+## Objectives
 
-Objective: Evaluate the market feasibility, commercial potential, and regulatory environment for launching the Aquaria project in Morocco—whether as an aquarium attraction or as a retail/e-commerce business in aquariophilia.
-📂 Project Structure (Implementation-Ready Directory)
+### Primary Objective
 
+Conduct a comprehensive market analysis to evaluate the viability and strategic approach for Aquaria's AWG entry into the Moroccan market.
+
+### Secondary Objectives
+
+1.  **Market Demand Assessment**
+    *   Quantify water scarcity levels across different Moroccan regions
+    *   Identify geographic hotspots with the highest water stress indicators
+    *   Analyze seasonal water availability patterns and drought frequency
+    *   Assess current water infrastructure gaps in target areas
+2.  **Target Market Segmentation**
+    *   Map potential customer segments:
+        *   Residential households in water-stressed areas
+        *   Commercial businesses (hotels, restaurants, offices)
+        *   Industrial facilities requiring clean water
+        *   Community centers and public institutions
+    *   Evaluate purchasing power and willingness to invest in AWG technology
+    *   Identify early adopter profiles and decision-making factors
+3.  **Competitive Landscape Analysis**
+    *   Identify existing water solution providers in Morocco
+    *   Analyze alternative water sources (bottled water, water delivery services)
+    *   Assess pricing structures of current water solutions
+    *   Evaluate competitive advantages of AWG technology vs. alternatives
+4.  **Regulatory and Infrastructure Assessment**
+    *   Research water quality standards and regulations in Morocco
+    *   Analyze electricity infrastructure required for AWG operation
+    *   Identify potential government incentives for sustainable water solutions
+    *   Assess import/distribution requirements for AWG equipment
+5.  **Market Entry Strategy Recommendations**
+    *   Prioritize target cities/regions based on data analysis
+    *   Recommend optimal market entry approach:
+        *   Direct sales vs. partnerships
+        *   B2B vs. B2C focus
+        *   Pilot program locations
+    *   Suggest pricing strategies adapted to local market conditions
+    *   Identify key success factors and potential barriers
+6.  **Financial Viability Assessment**
+    *   Estimate total addressable market (TAM) size in Morocco
+    *   Project potential revenue from identified target segments
+    *   Analyze cost structures for market entry and operations
+    *   Develop ROI projections for different market scenarios
+
+## Success Metrics
+
+*   **Quantitative Analysis:** Water stress indices, market size estimates, demographic data
+*   **Qualitative Insights:** Regulatory landscape, cultural factors, adoption barriers
+*   **Strategic Clarity:** Clear go/no-go recommendation with supporting rationale
+*   **Actionable Intelligence:** Specific city targets, customer segments, and entry strategies
+
+## Expected Outcomes
+
+1.  Data-driven market assessment with geographic prioritization
+2.  Customer segmentation framework for targeted marketing
+3.  Competitive positioning strategy highlighting AWG advantages
+4.  Regulatory compliance roadmap for market entry
+5.  Financial projections supporting investment decisions
+6.  Implementation timeline with key milestones
+
+## Alignment with Aquaria's Mission
+
+These objectives directly support Aquaria's goal of addressing water security challenges by:
+
+*   Identifying communities most in need of sustainable water solutions
+*   Ensuring market entry strategies align with local needs and capabilities
+*   Maximizing positive impact while maintaining business viability
+*   Supporting sustainable development goals in water-stressed regions
+
+## Project Structure
+
+```
 Aquaria-Morocco_Data-Analysis_Project/
-│
-├── data/
-│   ├── raw/                  # Unprocessed source data
-│   ├── processed/            # Cleaned & normalized datasets
-│   └── external/             # PDFs, scraped HTML, 3rd-party files
-│
-├── notebooks/
-│   ├── eda/
-│   ├── financial_modeling/
-│   └── ml_models/
-│
-├── scripts/
-│   ├── data_collection.py
-│   ├── data_cleaning.py
-│   └── model_runner.py
-│
-├── models/                   # Trained ML models, scenarios
-├── visuals/                  # Charts, maps, etc.
-├── reports/
-│   └── final_report.pdf
-│
-├── dashboards/               # Streamlit/Power BI files
-└── README.md
+├── .gitignore
+├── README.md          # This file, providing an overview of the project
+├── requirements.txt   # List of Python dependencies
+├── dashboards/        # Directory containing dashboard files
+├── data/              # Directory for storing data
+│   ├── external/      # Data from external sources
+│   ├── processed/     # Processed data ready for analysis
+│   └── raw/           # Raw, unprocessed data
+├── documentations/    # Project documentation and reports
+│   └── quaria.pdf     # Project description PDF
+│   └── Timeline.xlsx  # Project timeline
+├── models/            # Trained machine learning models
+├── notebooks/         # Jupyter notebooks for data exploration and analysis
+│   ├── eda/           # Notebooks for exploratory data analysis
+│   ├── financial_modeling/ # Notebooks for financial modeling
+│   └── ml_models/     # Notebooks for machine learning models
+├── reports/           # Generated reports and visualizations
+├── scripts/           # Python scripts for data collection and processing
+│   ├── data_collection.py # Script for collecting data
+│   └── morocco_water_statistics.py # Script for water statistics analysis
+└── visuals/           # Directory for storing visualizations
+```
 
-Phase 1: 🔍 Project Definition
-Goals:
+## Setup Environment
 
-    Assess demand for aquariums/aquaria products in Morocco.
+To set up the environment for this project, you need to install the required dependencies. You can do this using pip:
 
-    Identify profitable regions, segments (B2C, B2B, luxury, entry-level).
+```bash
+pip install -r requirements.txt
+```
 
-    Quantify startup and operational costs.
+### Create and Access a Virtual Environment
 
-    Simulate ROI scenarios.
+It is recommended to create a virtual environment to isolate the project dependencies.
 
-    Understand logistical, legal, and environmental constraints.
+1.  **Create a virtual environment:**
 
-Deliverables:
+    ```bash
+    python -m venv venv
+    ```
 
-    Strategic report (PDF)
+2.  **Activate the virtual environment:**
 
-    Financial modeling workbook
+    *   **Linux/macOS:**
 
-    Interactive dashboard (optional)
+        ```bash
+        source venv/bin/activate
+        ```
 
-    Slide presentation
+    *   **Windows:**
 
-Phase 2: 🌍 Data Collection
-Key Data Areas:
-🧑‍🤝‍🧑 Demographics & Economy
+        ```bash
+        venv\Scripts\activate
+        ```
 
-    HCP, World Bank, IMF
+## Morocco Water Statistics Script
 
-    Urban/rural split, regional income levels
+This project includes a Python script, `scripts/morocco_water_statistics.py`, that provides structured data and analysis related to water resources in Morocco. The script uses the `pandas` and `numpy` libraries to create DataFrames containing national water overview data, regional dam performance data, government investment data, and time series data for trend analysis.
 
-    Internet & mobile penetration
+### Usage
 
-🐠 Pet & Aquaria Market
+To run the script, execute the following command:
 
-    Ownership trends (TGM, GlobalPETS)
+```bash
+python scripts/morocco_water_statistics.py
+```
 
-    Pet types and aquaria preference
+The script will print key metrics and example analyses to the console. It also includes a function to export the datasets to CSV files for further analysis.
 
-    Estimated spend per household
+### Data Sources
 
-🛍️ Competition & Distribution
+The data used in this script is sourced from the Ministry of Equipment and Water and other publicly available sources.
 
-    Online stores (Ubuy, Jumia, PetWorld)
+### Key Features
 
-    Local shops (Aquarium Maroc, AquaFishop)
+*   **DataFrames:** The script uses `pandas` DataFrames to store and manipulate the data.
+*   **Market Opportunity Scoring:** The script calculates a market opportunity score for each region based on water stress indicators.
+*   **Key Metrics:** The script calculates key metrics for AWG market analysis, such as water crisis severity, infrastructure failure rate, and government investment ready USD.
+*   **Export to CSV:** The script includes a function to export the datasets to CSV files for further analysis.
 
-    Public aquariums (e.g., Morocco Mall)
+### Examples
 
-💰 Cost & Regulation
+The script includes several examples of how to use the data, such as:
 
-    Tariffs (HS codes: 70200019, 842121, etc.)
-
-    Import rules (ATLAS, ONSSA)
-
-    Urban planning (PLU), water/electricity access
-
-    Species restrictions (CITES, invasive plants)
-
-💡 Tools: Manual research, web scraping, FOI requests, local surveys.
-Phase 3: 🧼 Data Cleaning
-Steps:
-
-    Handle missing and duplicate values
-
-    Convert all monetary values to MAD (historical exchange rates)
-
-    Normalize column names, date formats, categories
-
-    Create derived metrics:
-
-        CAGR of pet ownership
-
-        Cost per unit (import CIF + taxes)
-
-        Revenue per customer
-
-Output Files:
-
-    cleaned_demographics.csv
-
-    cleaned_pet_market.csv
-
-    cleaned_import_data.csv
-
-    cleaned_cost_structure.csv
-
-Phase 4: 📊 Exploratory Data Analysis (EDA)
-Visual Analyses:
-
-    Growth in pet ownership by region
-
-    Import trends (volume/value by country)
-
-    Revenue vs income levels
-
-    E-commerce vs. retail share
-
-    Competitor mapping
-
-Tools:
-
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import plotly.express as px
-
-Optional: Use geopandas or folium for regional insights.
-Phase 5: 📈 Financial Modeling
-Components:
-CAPEX:
-
-    Store setup / site construction
-
-    Equipment stock
-
-    Licensing & IT systems
-
-OPEX:
-
-    Salaries
-
-    Utilities (filtration, heating, water)
-
-    Recurrent stock imports
-
-    Marketing
-
-Revenue Streams:
-
-    Product sales (hardware, fish, plants)
-
-    Services (maintenance, consulting, custom builds)
-
-Modeling Scenarios:
-
-    Conservative: Low adoption, high OPEX
-
-    Moderate: Balanced operations
-
-    Ambitious: Scalable e-commerce success
-
-Tools:
-
-    Python (numpy, pandas)
-
-    Excel (dashboards, breakeven charts)
-
-📁 Deliverable: financial_model.py or financial_model.xlsx
-Phase 6: ⚖️ Regulatory & Feasibility Assessment
-Topics to Address:
-
-    PLU zoning maps for retail sites
-
-    ONSSA import certifications
-
-    Environmental assessments (for marine fauna)
-
-    Utility availability and cost
-
-    Logistic chain (air/sea, live animal handling)
-
-📁 Deliverable: regulatory_summary.md
-Phase 7: 🤖 Machine Learning (Optional but Valuable)
-Use Cases:
-
-    Time-series forecasting of demand
-
-        Tools: fbprophet, ARIMA
-
-    Customer segmentation
-
-        Tools: KMeans, PCA
-
-    Sentiment analysis of online reviews
-
-        Tools: nltk, textblob, transformers
-
-📁 Models saved in: /models/
-Phase 8: 📈 Visualization & Dashboard
-Deliverables:
-
-    Static: Charts (matplotlib, seaborn, plotly)
-
-    Dynamic:
-
-        Power BI dashboard
-
-        Streamlit app with filters (regions, CAPEX levels, scenarios)
-
-📁 Folder: /dashboards/
-Phase 9: 📄 Final Report
-Structure:
-
-    Executive Summary
-
-    Market Overview
-
-    Data Analysis
-
-    Financial Projections
-
-    Regulatory Constraints
-
-    Strategic Recommendations
-
-    Appendices: Data sources, code snippets, HS codes
-
-📁 Output: reports/final_report.pdf
-Phase 10: 🗣️ Presentation
-Prepare:
-
-    Key findings slide deck
-
-    Regional opportunity maps
-
-    Summary charts (CAPEX vs ROI, demand trends)
-
-    Optional: pitch deck for investors
-
-📁 Format: PDF or PowerPoint
-✅ Summary of Tools & Stack
-Category	Tools
-Programming	Python, R
-Data Analysis	pandas, numpy, matplotlib, seaborn, plotly
-ML	scikit-learn, Prophet, ARIMA, KMeans
-Visualization	Tableau, Power BI, Dash, Streamlit
-GIS	geopandas, folium
-Collaboration	GitHub, Google Drive, Notion
-Modeling	Excel or Python
-Legal Research	ONSSA, CITES, HCP, PLU documents
-
-
-    Partner with a local university for surveys
-
-    Use Google Trends API for aquaria-related search terms
-
-    Conduct a focus group with Moroccan pet owners
-
-# Environment Setup
-To create a virtual environment, run the following commands:
-
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+*   Finding the highest priority regions for AWG deployment
+*   Calculating market size indicators
+*   Tracking government investment opportunities
+*   Identifying competitive advantages
